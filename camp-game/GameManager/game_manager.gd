@@ -8,11 +8,18 @@ extends Node2D
 
 var task_complete = false
 
+const DRAG_MINIGAME_SCENE = preload("res://drag_test.tscn")
+
 func _ready() -> void:
 	timer.start()
 	game_time_bar.value = 100
 	complete_text.visible = false
 	fail_text.visible = false
+	
+	var game_instance = DRAG_MINIGAME_SCENE.instantiate()
+	game_instance.goal_complete.connect(_goal_complete)
+	game_instance.goal_failed.connect(_goal_failed)
+	add_child(game_instance)
 	
 func _process(delta: float) -> void:
 	if game_time_bar.value > 0:
@@ -21,3 +28,14 @@ func _process(delta: float) -> void:
 		fail_text.visible = true
 	elif game_time_bar.value <=0 and task_complete:
 		complete_text.visible = true
+		
+		
+func _goal_complete():
+	task_complete = true
+	timer.stop()
+	game_time_bar.value = 0
+	
+func _goal_failed():
+	task_complete = false
+	timer.stop()
+	game_time_bar.value = 0

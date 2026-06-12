@@ -1,6 +1,8 @@
 extends Node2D
 
 @export var items: Array[Node2D] = []
+signal goal_complete
+signal goal_failed
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
