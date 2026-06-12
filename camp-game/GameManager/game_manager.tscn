@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cbf0mi25jqgx4"]
+
+[ext_resource type="Script" uid="uid://cdxdcryb6veth" path="res://GameManager/game_manager.gd" id="1_hwd4i"]
+
+[node name="GameManager" type="Node2D" unique_id=1188423836 node_paths=PackedStringArray("game_time_bar", "timer", "complete_text", "fail_text")]
+script = ExtResource("1_hwd4i")
+game_time_bar = NodePath("GameTime")
+timer = NodePath("Timer")
+complete_text = NodePath("CompleteText")
+fail_text = NodePath("FailText")
+
+[node name="GameTime" type="ProgressBar" parent="." unique_id=1531723092]
+offset_left = 258.0
+offset_top = 22.0
+offset_right = 903.0
+offset_bottom = 49.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="." unique_id=1437989009]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="CompleteText" type="Label" parent="." unique_id=192824538]
+offset_left = 448.0
+offset_top = 233.0
+offset_right = 586.0
+offset_bottom = 260.0
+scale = Vector2(2, 2)
+text = "TASK COMPLETED"
+
+[node name="FailText" type="Label" parent="." unique_id=1929929682]
+offset_left = 448.0
+offset_top = 233.0
+offset_right = 586.0
+offset_bottom = 260.0
+scale = Vector2(2, 2)
+text = "TASK FAILED"
