@@ -15,6 +15,18 @@ run/main_scene="uid://ccrqvvhv60dqh"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 
+[global_group]
+
+Barrier=""
+Target=""
+
+[input]
+
+Click={
+"deadzone": 0.2,
+"events": []
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

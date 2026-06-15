@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://l6o1jhuyfelj"]
+
+[ext_resource type="Script" uid="uid://b5pe2kpc6s80r" path="res://Minigames/Marshmallow/marshmallow.gd" id="1_fyyng"]
+[ext_resource type="Texture2D" uid="uid://dj4dx7qhuxji7" path="res://Sprites/marshmallow.png" id="1_noqwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyyng"]
+size = Vector2(116, 117)
+
+[node name="Marshmallow" type="Node2D" unique_id=1571153316]
+script = ExtResource("1_fyyng")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=852994524]
+texture = ExtResource("1_noqwc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1476220956]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1551330502]
+position = Vector2(2, 0.5)
+shape = SubResource("RectangleShape2D_fyyng")

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ccrqvvhv60dqh"]
 
-[ext_resource type="PackedScene" uid="uid://waa45owmw26v" path="res://draggable_object.tscn" id="1_4cyx6"]
-[ext_resource type="Script" uid="uid://cj4e6k40mmmff" path="res://drag_test.gd" id="1_mmu7e"]
-[ext_resource type="PackedScene" uid="uid://davd6cuwgmir0" path="res://drag_recepticle.tscn" id="2_nqxis"]
+[ext_resource type="PackedScene" uid="uid://waa45owmw26v" path="res://Minigames/FireBuilding/draggable_object.tscn" id="1_4cyx6"]
+[ext_resource type="Script" uid="uid://cj4e6k40mmmff" path="res://Minigames/FireBuilding/drag_test.gd" id="1_mmu7e"]
+[ext_resource type="PackedScene" uid="uid://davd6cuwgmir0" path="res://Minigames/FireBuilding/drag_recepticle.tscn" id="2_nqxis"]
 [ext_resource type="Texture2D" uid="uid://dq2iioa7rs38v" path="res://Sprites/1.png" id="3_maydp"]
 [ext_resource type="Texture2D" uid="uid://drpw12c7porh2" path="res://Sprites/2.png" id="4_mmu7e"]
 [ext_resource type="Texture2D" uid="uid://cqwpgf8hetc2r" path="res://Sprites/3.png" id="5_xtgtc"]

@@ -16,7 +16,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				parent.goal_failed.emit()
 			
 		if next_item == 4:
-			if parent and parent.has_signal("goal_failed"):
+			if parent and parent.has_signal("goal_complete"):
 				parent.goal_complete.emit()
 
 

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bd1k04rydq1e"]
+
+[ext_resource type="Texture2D" uid="uid://ckh2ax2d1l14a" path="res://Sprites/campfire.png" id="1_rp5ex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rp5ex"]
+size = Vector2(206, 234)
+
+[node name="Campfire" type="Node2D" unique_id=1582447079]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=579211118]
+position = Vector2(0, -1)
+scale = Vector2(2.0625, 2)
+texture = ExtResource("1_rp5ex")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2009460933]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=109615608]
+position = Vector2(7, 1)
+shape = SubResource("RectangleShape2D_rp5ex")

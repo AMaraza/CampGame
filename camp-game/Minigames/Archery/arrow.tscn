@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bl3u2k2horb3s"]
+
+[ext_resource type="Texture2D" uid="uid://bjr41aap1vyy0" path="res://Sprites/arrow.png" id="1_lt3oj"]
+[ext_resource type="Script" uid="uid://drdsos7niqmjf" path="res://Minigames/Archery/arrow.gd" id="1_ur8qs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lt3oj"]
+size = Vector2(116, 20)
+
+[node name="Arrow" type="Node2D" unique_id=1995438017]
+script = ExtResource("1_ur8qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=569942472]
+texture = ExtResource("1_lt3oj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=197281186]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1147043634]
+shape = SubResource("RectangleShape2D_lt3oj")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

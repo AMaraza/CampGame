@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://du0t5h6g4jk76"]
+
+[ext_resource type="PackedScene" uid="uid://bnvjl1jkyilxs" path="res://Minigames/Archery/target.tscn" id="1_hoag4"]
+[ext_resource type="Script" uid="uid://beaij3c74e3h1" path="res://Minigames/Archery/archery_game.gd" id="1_hr7td"]
+[ext_resource type="Texture2D" uid="uid://bjr41aap1vyy0" path="res://Sprites/arrow.png" id="2_m37mt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hr7td"]
+size = Vector2(125, 646)
+
+[node name="ArcheryGame" type="Node2D" unique_id=270148332]
+script = ExtResource("1_hr7td")
+
+[node name="Target" parent="." unique_id=1508222290 groups=["Target"] instance=ExtResource("1_hoag4")]
+position = Vector2(987, 332)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1948381667]
+position = Vector2(171, 327)
+texture = ExtResource("2_m37mt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=731873342 groups=["Barrier"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=87279854]
+position = Vector2(1322, 323)
+shape = SubResource("RectangleShape2D_hr7td")
