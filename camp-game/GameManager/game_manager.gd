@@ -11,6 +11,8 @@ var task_complete = false
 const DRAG_MINIGAME_SCENE = preload("res://Minigames/FireBuilding/drag_test.tscn")
 const ARCHERY_MINIGAME_SCENE = preload("res://Minigames/Archery/archery_game.tscn")
 
+#Comment to test gh
+
 func _ready() -> void:
 	randomize()
 	timer.start()
