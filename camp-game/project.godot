@@ -19,6 +19,10 @@ config/icon="res://Sprites/icon.svg"
 
 Barrier=""
 Target=""
+flag_enemy=""
+flag=""
+runner=""
+water=""
 
 [input]
 

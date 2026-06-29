@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c77wadf40c5ax"]
+
+[ext_resource type="Script" uid="uid://cmtobv2lnyxsm" path="res://Minigames/RockSkipping/rock_game.gd" id="1_7y2at"]
+[ext_resource type="PackedScene" uid="uid://852yfed1wkjw" path="res://Minigames/RockSkipping/rock.tscn" id="1_ol6ie"]
+[ext_resource type="PackedScene" uid="uid://3v55mchfjuxw" path="res://Minigames/RockSkipping/water_line.tscn" id="2_41jcr"]
+
+[node name="RockGame" type="Node2D" unique_id=1575879962]
+script = ExtResource("1_7y2at")
+
+[node name="Rock" parent="." unique_id=2104048102 instance=ExtResource("1_ol6ie")]
+position = Vector2(565, 86)
+
+[node name="WaterLine" parent="." unique_id=870771625 instance=ExtResource("2_41jcr")]
+position = Vector2(568, 450)
+
+[node name="TargetBounces" type="Label" parent="." unique_id=1871173432]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Target Bounces: 5"
+
+[node name="CurrentBounces" type="Label" parent="." unique_id=1178174646]
+offset_left = 1.0
+offset_top = 25.0
+offset_right = 110.0
+offset_bottom = 48.0
+text = "# of Bounces: 0"

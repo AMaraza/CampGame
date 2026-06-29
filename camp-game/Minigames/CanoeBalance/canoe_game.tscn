@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://n36flu2e88nb"]
+
+[ext_resource type="Script" uid="uid://bc1muff4fd7e6" path="res://Minigames/CanoeBalance/canoe_game.gd" id="1_b8dqi"]
+[ext_resource type="PackedScene" uid="uid://bxidpp2y2p0is" path="res://Minigames/CanoeBalance/canoe.tscn" id="1_e4rae"]
+
+[node name="CanoeGame" type="Node2D" unique_id=147341306]
+script = ExtResource("1_b8dqi")
+
+[node name="Canoe" parent="." unique_id=653511510 instance=ExtResource("1_e4rae")]
+position = Vector2(587, 345)

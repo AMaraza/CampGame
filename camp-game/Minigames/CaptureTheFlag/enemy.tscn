@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://gjx3efqln2h"]
+
+[ext_resource type="Script" uid="uid://t11skrp8qw8g" path="res://Minigames/CaptureTheFlag/enemy.gd" id="1_lfc72"]
+[ext_resource type="Texture2D" uid="uid://c1jsut5ce6pk6" path="res://Sprites/sprint.png" id="1_vxmn0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bn7k0"]
+size = Vector2(120, 117)
+
+[node name="Enemy" type="Node2D" unique_id=647399676]
+script = ExtResource("1_lfc72")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1755925181]
+texture = ExtResource("1_vxmn0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1211153467 groups=["flag_enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2012528365]
+position = Vector2(2, -0.5)
+shape = SubResource("RectangleShape2D_bn7k0")

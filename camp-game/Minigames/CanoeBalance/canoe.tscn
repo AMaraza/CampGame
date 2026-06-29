@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bxidpp2y2p0is"]
+
+[ext_resource type="Script" uid="uid://d4evfas7n8fsx" path="res://Minigames/CanoeBalance/canoe.gd" id="1_48qtv"]
+[ext_resource type="Texture2D" uid="uid://b7yx16f1b4vxw" path="res://Sprites/canoe.png" id="1_n2spa"]
+
+[node name="Canoe" type="Node2D" unique_id=653511510]
+script = ExtResource("1_48qtv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1380149840]
+texture = ExtResource("1_n2spa")

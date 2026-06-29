@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://becxfyhr67mna"]
+
+[ext_resource type="Script" uid="uid://c8xdr4jefauvy" path="res://Minigames/CaptureTheFlag/flag_game.gd" id="1_ms6fw"]
+[ext_resource type="PackedScene" uid="uid://6i4hgsble3h0" path="res://Minigames/CaptureTheFlag/flag.tscn" id="1_pm6yc"]
+[ext_resource type="PackedScene" uid="uid://jsp3vtdvyv8l" path="res://Minigames/CaptureTheFlag/runner.tscn" id="2_xlc05"]
+[ext_resource type="PackedScene" uid="uid://gjx3efqln2h" path="res://Minigames/CaptureTheFlag/enemy.tscn" id="4_l1yk4"]
+
+[node name="FlagGame" type="Node2D" unique_id=1546939547]
+script = ExtResource("1_ms6fw")
+
+[node name="Flag" parent="." unique_id=494135012 instance=ExtResource("1_pm6yc")]
+position = Vector2(581, 62)
+
+[node name="Runner" parent="." unique_id=284547857 instance=ExtResource("2_xlc05")]
+position = Vector2(582, 587)
+
+[node name="Enemy" parent="." unique_id=647399676 instance=ExtResource("4_l1yk4")]
+position = Vector2(581, 452)
+
+[node name="Enemy2" parent="." unique_id=1676422301 instance=ExtResource("4_l1yk4")]
+position = Vector2(580, 199)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://6i4hgsble3h0"]
+
+[ext_resource type="Texture2D" uid="uid://77qujwv5rq33" path="res://Sprites/flying-flag.png" id="1_bqxdt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bn7k0"]
+size = Vector2(122, 123)
+
+[node name="Flag" type="Node2D" unique_id=494135012]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1363905328]
+texture = ExtResource("1_bqxdt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=344363271 groups=["flag"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1042116080]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_bn7k0")

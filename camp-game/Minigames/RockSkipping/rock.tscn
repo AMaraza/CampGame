@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://852yfed1wkjw"]
+
+[ext_resource type="Texture2D" uid="uid://k2sg0fvcyc2a" path="res://Sprites/rock.png" id="1_jgkai"]
+[ext_resource type="Script" uid="uid://dw4maboqewvcq" path="res://Minigames/RockSkipping/rock.gd" id="1_pra5f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bn7k0"]
+size = Vector2(129, 67)
+
+[node name="Rock" type="Node2D" unique_id=2104048102]
+script = ExtResource("1_pra5f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=767324137]
+texture = ExtResource("1_jgkai")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1541364089]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=984305650]
+position = Vector2(0.5, 30.5)
+shape = SubResource("RectangleShape2D_bn7k0")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

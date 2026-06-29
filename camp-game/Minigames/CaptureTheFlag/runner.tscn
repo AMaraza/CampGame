@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://jsp3vtdvyv8l"]
+
+[ext_resource type="Texture2D" uid="uid://bc7i84jue7ldb" path="res://Sprites/run.png" id="1_2p200"]
+[ext_resource type="Script" uid="uid://r03xr6y5v11p" path="res://Minigames/CaptureTheFlag/runner.gd" id="1_wmdyw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bn7k0"]
+size = Vector2(118, 119)
+
+[node name="Runner" type="Node2D" unique_id=284547857]
+script = ExtResource("1_wmdyw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=560228961]
+texture = ExtResource("1_2p200")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1956414992 groups=["runner"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=761971730]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_bn7k0")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

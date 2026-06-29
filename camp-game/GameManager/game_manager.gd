@@ -1,4 +1,5 @@
 extends Node2D
+class_name GameManager
 
 @export var game_time_bar: ProgressBar
 @export var timer: Timer
@@ -10,8 +11,9 @@ var task_complete = false
 
 const DRAG_MINIGAME_SCENE = preload("res://Minigames/FireBuilding/drag_test.tscn")
 const ARCHERY_MINIGAME_SCENE = preload("res://Minigames/Archery/archery_game.tscn")
-
-#Comment to test gh
+const FLAG_MINIGAME_SCENE = preload("res://Minigames/CaptureTheFlag/flag_game.tscn")
+const ROCK_MINIGAME_SCENE = preload("res://Minigames/RockSkipping/rock_game.tscn")
+const CANOE_MINIGAME_SCENE = preload("res://Minigames/CanoeBalance/canoe_game.tscn")
 
 func _ready() -> void:
 	randomize()
@@ -20,7 +22,6 @@ func _ready() -> void:
 	complete_text.visible = false
 	fail_text.visible = false
 	spawn_minigame()
-
 
 	
 func _process(delta: float) -> void:
@@ -43,15 +44,23 @@ func _goal_failed():
 	game_time_bar.value = 0
 	
 func spawn_minigame():
-	var random_int = randi_range(1, 2)
+	var random_int = randi_range(1, 4)
+	#var random_int = 4
 	if random_int == 1:
-		var game_instance = DRAG_MINIGAME_SCENE.instantiate()
-		game_instance.goal_complete.connect(_goal_complete)
-		game_instance.goal_failed.connect(_goal_failed)
-		add_child(game_instance)
+		spawn_game(DRAG_MINIGAME_SCENE)
+	elif random_int == 2:
+		spawn_game(ARCHERY_MINIGAME_SCENE)
+	elif random_int == 3:
+		spawn_game(ROCK_MINIGAME_SCENE)
+	elif random_int == 4:
+		spawn_game(CANOE_MINIGAME_SCENE)
 	else:
-		var game_instance = ARCHERY_MINIGAME_SCENE.instantiate()
+		spawn_game(FLAG_MINIGAME_SCENE)
+	
+	
+func spawn_game(game_scene):
+		var game_instance = game_scene.instantiate()
 		game_instance.goal_complete.connect(_goal_complete)
 		game_instance.goal_failed.connect(_goal_failed)
 		add_child(game_instance)
-	
+		move_child(game_instance, 0)
