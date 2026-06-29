@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dpj3xthy00igb"]
+
+[ext_resource type="PackedScene" uid="uid://ccqtcdq80qovy" path="res://Minigames/Fishing/fish.tscn" id="1_2echs"]
+[ext_resource type="Script" uid="uid://cp231c2w8kjlp" path="res://Minigames/Fishing/fishing_game.gd" id="1_14apd"]
+[ext_resource type="PackedScene" uid="uid://c2doabkmat3ko" path="res://Minigames/Fishing/hook.tscn" id="2_o1ive"]
+
+[node name="FishingGame" type="Node2D" unique_id=455839338]
+script = ExtResource("1_14apd")
+
+[node name="Fish" parent="." unique_id=803930893 instance=ExtResource("1_2echs")]
+position = Vector2(524, 475)
+
+[node name="Hook" parent="." unique_id=1846331135 instance=ExtResource("2_o1ive")]
+position = Vector2(584, 68)

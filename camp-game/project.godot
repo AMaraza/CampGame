@@ -23,6 +23,7 @@ flag_enemy=""
 flag=""
 runner=""
 water=""
+fish_hook=""
 
 [input]
 

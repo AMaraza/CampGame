@@ -1,7 +1,7 @@
 extends Node2D
 class_name Rock
 
-var fall_speed = 3
+var fall_speed = 300
 var num_bounces = 0
 var target_bounces = 5
 var game_over = false
@@ -15,7 +15,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.y += fall_speed
+	position.y += fall_speed * delta
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

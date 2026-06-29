@@ -44,8 +44,8 @@ func _goal_failed():
 	game_time_bar.value = 0
 	
 func spawn_minigame():
-	var random_int = randi_range(1, 4)
-	#var random_int = 4
+	var random_int = randi_range(1, 5)
+	#var random_int = 2
 	if random_int == 1:
 		spawn_game(DRAG_MINIGAME_SCENE)
 	elif random_int == 2:

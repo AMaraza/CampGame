@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c2doabkmat3ko"]
+
+[ext_resource type="Texture2D" uid="uid://4k54uafn086e" path="res://Sprites/icon.svg" id="1_2blfi"]
+[ext_resource type="Script" uid="uid://dexex66du745p" path="res://Minigames/Fishing/hook.gd" id="1_32lpn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rk83o"]
+size = Vector2(64, 65)
+
+[node name="Hook" type="Node2D" unique_id=1846331135]
+script = ExtResource("1_32lpn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1424533171]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2blfi")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1437484389 groups=["fish_hook"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=628984901]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_rk83o")

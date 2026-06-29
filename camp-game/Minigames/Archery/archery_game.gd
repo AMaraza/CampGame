@@ -19,7 +19,7 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	arrow_sprite.position.y += 3 * direction
+	arrow_sprite.position.y += 300 * direction * delta
 	
 	if arrow_sprite.position.y < 0 or arrow_sprite.position.y > get_window().size.y:
 		direction *= -1

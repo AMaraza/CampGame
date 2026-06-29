@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ccqtcdq80qovy"]
+
+[ext_resource type="Script" uid="uid://3p7c7nnq3yex" path="res://Minigames/Fishing/fish.gd" id="1_tcr1k"]
+[ext_resource type="Texture2D" uid="uid://b13grt2wbqa3m" path="res://Sprites/salmon.png" id="1_v8di2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rk83o"]
+size = Vector2(122, 121)
+
+[node name="Fish" type="Node2D" unique_id=803930893 node_paths=PackedStringArray("sprite_2d")]
+script = ExtResource("1_tcr1k")
+sprite_2d = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=189283004]
+texture = ExtResource("1_v8di2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2102110780]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1182180971]
+position = Vector2(-2, -0.5)
+shape = SubResource("RectangleShape2D_rk83o")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://b26jv5tesmi4e"]
 
 [ext_resource type="PackedScene" uid="uid://cbf0mi25jqgx4" path="res://GameManager/game_manager.tscn" id="1_kw3pw"]
-[ext_resource type="PackedScene" uid="uid://ccrqvvhv60dqh" path="res://Minigames/FireBuilding/drag_test.tscn" id="2_i8ejn"]
 
 [node name="MainScene" type="Node2D" unique_id=748932504]
-
-[node name="DragTest" parent="." unique_id=1924011033 instance=ExtResource("2_i8ejn")]
 
 [node name="GameManager" parent="." unique_id=1188423836 instance=ExtResource("1_kw3pw")]
