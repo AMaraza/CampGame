@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cjafhdjf12i0"]
+
+[ext_resource type="Texture2D" uid="uid://bc7i84jue7ldb" path="res://Sprites/run.png" id="1_51b0e"]
+[ext_resource type="Script" uid="uid://cv2wdg5w5h311" path="res://Minigames/Hiking/hiker.gd" id="1_a3yux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rk83o"]
+size = Vector2(106.66667, 110.66667)
+
+[node name="Hiker" type="Node2D" unique_id=2074974389]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_a3yux")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=300760264]
+texture = ExtResource("1_51b0e")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=940246011]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1804296862]
+position = Vector2(-1.333334, 0.66666603)
+shape = SubResource("RectangleShape2D_rk83o")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

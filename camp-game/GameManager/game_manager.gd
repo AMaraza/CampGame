@@ -14,6 +14,7 @@ const ARCHERY_MINIGAME_SCENE = preload("res://Minigames/Archery/archery_game.tsc
 const FLAG_MINIGAME_SCENE = preload("res://Minigames/CaptureTheFlag/flag_game.tscn")
 const ROCK_MINIGAME_SCENE = preload("res://Minigames/RockSkipping/rock_game.tscn")
 const CANOE_MINIGAME_SCENE = preload("res://Minigames/CanoeBalance/canoe_game.tscn")
+const HIKING_MINIGAME_SCENE = preload("res://Minigames/Hiking/hiking_game.tscn")
 
 func _ready() -> void:
 	randomize()
@@ -44,8 +45,8 @@ func _goal_failed():
 	game_time_bar.value = 0
 	
 func spawn_minigame():
-	var random_int = randi_range(1, 5)
-	#var random_int = 2
+	#var random_int = randi_range(1, 6)
+	var random_int = 5
 	if random_int == 1:
 		spawn_game(DRAG_MINIGAME_SCENE)
 	elif random_int == 2:
@@ -54,6 +55,8 @@ func spawn_minigame():
 		spawn_game(ROCK_MINIGAME_SCENE)
 	elif random_int == 4:
 		spawn_game(CANOE_MINIGAME_SCENE)
+	elif random_int == 5:
+		spawn_game(HIKING_MINIGAME_SCENE)
 	else:
 		spawn_game(FLAG_MINIGAME_SCENE)
 	

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bpck4u13gxmam"]
+
+[ext_resource type="Texture2D" uid="uid://4k54uafn086e" path="res://Sprites/icon.svg" id="1_mkgwo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rk83o"]
+size = Vector2(129, 128)
+
+[node name="Forest" type="Node2D" unique_id=1562157357]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1929080348]
+texture = ExtResource("1_mkgwo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=508606448 groups=["forest"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=120994702]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_rk83o")

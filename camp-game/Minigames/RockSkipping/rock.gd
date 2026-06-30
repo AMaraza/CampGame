@@ -1,7 +1,7 @@
 extends Node2D
 class_name Rock
 
-var fall_speed = 300
+var fall_speed = 500
 var num_bounces = 0
 var target_bounces = 5
 var game_over = false

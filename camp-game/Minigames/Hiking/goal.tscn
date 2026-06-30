@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://be6pbb0vhbtjx"]
+
+[ext_resource type="Texture2D" uid="uid://77qujwv5rq33" path="res://Sprites/flying-flag.png" id="1_gr6td"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rk83o"]
+size = Vector2(116, 124)
+
+[node name="Goal" type="Node2D" unique_id=368382379]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1122940675]
+texture = ExtResource("1_gr6td")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1855122063 groups=["hiking_goal"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=771828916]
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_rk83o")

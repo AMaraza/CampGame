@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c3hxrw13wawts"]
+
+[ext_resource type="Script" uid="uid://b400xo157qn2i" path="res://Minigames/Hiking/hiking_game.gd" id="1_byh7u"]
+[ext_resource type="PackedScene" uid="uid://cjafhdjf12i0" path="res://Minigames/Hiking/hiker.tscn" id="1_wccku"]
+[ext_resource type="PackedScene" uid="uid://bpck4u13gxmam" path="res://Minigames/Hiking/forest.tscn" id="2_aiouq"]
+[ext_resource type="PackedScene" uid="uid://be6pbb0vhbtjx" path="res://Minigames/Hiking/goal.tscn" id="3_hw5a5"]
+
+[node name="HikingGame" type="Node2D" unique_id=752666832]
+script = ExtResource("1_byh7u")
+
+[node name="Hiker" parent="." unique_id=2074974389 instance=ExtResource("1_wccku")]
+position = Vector2(549, 577)
+
+[node name="Forest" parent="." unique_id=1562157357 instance=ExtResource("2_aiouq")]
+position = Vector2(326, 519)
+scale = Vector2(2, 2)
+
+[node name="Forest3" parent="." unique_id=1543598317 instance=ExtResource("2_aiouq")]
+position = Vector2(325, 260)
+scale = Vector2(2, 2)
+
+[node name="Forest2" parent="." unique_id=1099403501 instance=ExtResource("2_aiouq")]
+position = Vector2(760, 518)
+scale = Vector2(2, 2)
+
+[node name="Forest5" parent="." unique_id=1640950082 instance=ExtResource("2_aiouq")]
+position = Vector2(1017, 519)
+scale = Vector2(2, 2)
+
+[node name="Forest6" parent="." unique_id=1516140106 instance=ExtResource("2_aiouq")]
+position = Vector2(1017, 261)
+scale = Vector2(2, 2)
+
+[node name="Forest7" parent="." unique_id=1912777348 instance=ExtResource("2_aiouq")]
+position = Vector2(1018, 4)
+scale = Vector2(2, 2)
+
+[node name="Forest4" parent="." unique_id=1519094601 instance=ExtResource("2_aiouq")]
+position = Vector2(582, 60)
+scale = Vector2(2, 2)
+
+[node name="Goal" parent="." unique_id=368382379 instance=ExtResource("3_hw5a5")]
+position = Vector2(795, 62)
