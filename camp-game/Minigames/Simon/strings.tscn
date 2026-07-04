@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bmrrr7y6x2lnp"]
+
+[ext_resource type="Script" uid="uid://cghl2xyqdse3" path="res://Minigames/Simon/strings.gd" id="1_71y3q"]
+[ext_resource type="Texture2D" uid="uid://4k54uafn086e" path="res://Sprites/icon.svg" id="2_26sa1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bn7k0"]
+size = Vector2(583, 42)
+
+[node name="Strings" type="Node2D" unique_id=1711207516]
+script = ExtResource("1_71y3q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1503522229]
+position = Vector2(289, 21.5)
+scale = Vector2(4.546875, 0.3359375)
+texture = ExtResource("2_26sa1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=479544470]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=667510474]
+position = Vector2(289.5, 22)
+shape = SubResource("RectangleShape2D_bn7k0")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

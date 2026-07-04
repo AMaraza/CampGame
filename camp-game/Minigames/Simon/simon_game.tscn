@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://jcbwu1y57ydw"]
+
+[ext_resource type="Script" uid="uid://b7eqrqi2f53w7" path="res://Minigames/Simon/simon_game.gd" id="1_aw4uf"]
+[ext_resource type="PackedScene" uid="uid://bmrrr7y6x2lnp" path="res://Minigames/Simon/strings.tscn" id="2_w35oi"]
+
+[node name="SimonGame" type="Node2D" unique_id=1910297775]
+script = ExtResource("1_aw4uf")
+
+[node name="Strings" parent="." unique_id=1711207516 instance=ExtResource("2_w35oi")]
+position = Vector2(292, 353)
+
+[node name="Strings2" parent="." unique_id=1621846816 instance=ExtResource("2_w35oi")]
+position = Vector2(292, 409)
+
+[node name="Strings3" parent="." unique_id=1593725987 instance=ExtResource("2_w35oi")]
+position = Vector2(292, 465)
+
+[node name="Strings4" parent="." unique_id=1745000582 instance=ExtResource("2_w35oi")]
+position = Vector2(292, 521)
+
+[connection signal="string_clicked" from="Strings" to="." method="_on_strings_string_clicked"]
+[connection signal="string_clicked" from="Strings2" to="." method="_on_strings_2_string_clicked"]
+[connection signal="string_clicked" from="Strings3" to="." method="_on_strings_3_string_clicked"]
+[connection signal="string_clicked" from="Strings4" to="." method="_on_strings_4_string_clicked"]
