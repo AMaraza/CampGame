@@ -24,7 +24,7 @@ func _ready() -> void:
 	fail_text.visible = false
 	spawn_minigame()
 
-	
+
 func _process(delta: float) -> void:
 	if game_time_bar.value > 0:
 		game_time_bar.value = (timer.time_left/timer.wait_time)*100
@@ -59,7 +59,6 @@ func spawn_minigame():
 		spawn_game(HIKING_MINIGAME_SCENE)
 	else:
 		spawn_game(FLAG_MINIGAME_SCENE)
-	
 	
 func spawn_game(game_scene):
 		var game_instance = game_scene.instantiate()
