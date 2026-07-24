@@ -1,27 +1,28 @@
 [gd_scene format=3 uid="uid://cbf0mi25jqgx4"]
 
 [ext_resource type="Script" uid="uid://cdxdcryb6veth" path="res://GameManager/game_manager.gd" id="1_hwd4i"]
+[ext_resource type="Texture2D" uid="uid://d1vtny4b8vvm4" path="res://Sprites/hearts.png" id="2_rt1ce"]
 
-[node name="GameManager" type="Node2D" unique_id=1188423836 node_paths=PackedStringArray("game_time_bar", "timer", "complete_text", "fail_text")]
+[node name="GameManager" type="Node2D" unique_id=1188423836 node_paths=PackedStringArray("hearts")]
 script = ExtResource("1_hwd4i")
-game_time_bar = NodePath("GameTime")
-timer = NodePath("Timer")
-complete_text = NodePath("CompleteText")
-fail_text = NodePath("FailText")
+hearts = [NodePath("IntermissionUI_Parent/Heart1"), NodePath("IntermissionUI_Parent/Heart2"), NodePath("IntermissionUI_Parent/Heart3")]
 
-[node name="GameTime" type="ProgressBar" parent="." unique_id=1531723092]
+[node name="GameUI_Parent" type="Node2D" parent="." unique_id=809038003]
+visible = false
+
+[node name="GameTime" type="ProgressBar" parent="GameUI_Parent" unique_id=1531723092]
 offset_left = 258.0
 offset_top = 22.0
 offset_right = 903.0
 offset_bottom = 49.0
 show_percentage = false
 
-[node name="Timer" type="Timer" parent="." unique_id=1437989009]
-wait_time = 5.0
+[node name="Timer" type="Timer" parent="GameUI_Parent" unique_id=1437989009]
+wait_time = 6.0
 one_shot = true
-autostart = true
 
-[node name="CompleteText" type="Label" parent="." unique_id=192824538]
+[node name="CompleteText" type="Label" parent="GameUI_Parent" unique_id=192824538]
+visible = false
 offset_left = 448.0
 offset_top = 233.0
 offset_right = 586.0
@@ -29,10 +30,45 @@ offset_bottom = 260.0
 scale = Vector2(2, 2)
 text = "TASK COMPLETED"
 
-[node name="FailText" type="Label" parent="." unique_id=1929929682]
+[node name="FailText" type="Label" parent="GameUI_Parent" unique_id=1929929682]
+visible = false
 offset_left = 448.0
 offset_top = 233.0
 offset_right = 586.0
 offset_bottom = 260.0
 scale = Vector2(2, 2)
 text = "TASK FAILED"
+
+[node name="IntermissionUI_Parent" type="Node2D" parent="." unique_id=64839951]
+visible = false
+
+[node name="LivesText" type="Label" parent="IntermissionUI_Parent" unique_id=1907658027]
+offset_left = 436.0
+offset_top = 226.0
+offset_right = 764.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 37
+text = "Lives Remaining"
+horizontal_alignment = 1
+
+[node name="Heart1" type="Sprite2D" parent="IntermissionUI_Parent" unique_id=802813701]
+visible = false
+position = Vector2(469, 358)
+texture = ExtResource("2_rt1ce")
+
+[node name="Heart3" type="Sprite2D" parent="IntermissionUI_Parent" unique_id=1035672844]
+visible = false
+position = Vector2(724, 358)
+texture = ExtResource("2_rt1ce")
+
+[node name="Heart2" type="Sprite2D" parent="IntermissionUI_Parent" unique_id=847547501]
+visible = false
+position = Vector2(598, 358)
+texture = ExtResource("2_rt1ce")
+
+[node name="Intermission_Timer" type="Timer" parent="IntermissionUI_Parent" unique_id=542705134]
+wait_time = 6.0
+one_shot = true
+
+[connection signal="timeout" from="GameUI_Parent/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="IntermissionUI_Parent/Intermission_Timer" to="." method="_on_intermission_timer_timeout"]

@@ -9,6 +9,11 @@ var sequence = []
 var current_index = 0
 var clicked_string = 0
 
+signal goal_complete
+signal goal_failed
+
+var game_over = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
@@ -21,7 +26,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if current_index == 5 and !game_over:
+		goal_complete.emit()
+		game_over = true
 
 
 func _on_strings_string_clicked() -> void:
@@ -46,3 +53,4 @@ func check_string():
 		current_index+= 1
 	else:
 		print("Wrong String")
+		goal_failed.emit()
